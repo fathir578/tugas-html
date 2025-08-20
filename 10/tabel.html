@@ -1,13 +1,234 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>belajar tabel html</title>
+    <title>Belajar Tabel HTML - Contoh Praktis</title>
+    
+    <!-- Styling internal untuk tampilan yang lebih menarik -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+        
+        /* Container untuk setiap tabel */
+        .table-container {
+            margin: 30px auto;
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 5px rgba(35, 33, 33, 0.985);
+        }
+        
+        /* Styling untuk semua tabel */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+        
+        /* Warna baris bergantian untuk readability */
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        /* Hover effect untuk baris */
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        /* Styling khusus untuk tabel pertama */
+        .basic-table td {
+            text-align: center;
+        }
+        
+        /* Styling untuk cell dengan warna khusus */
+        .highlight-blue {
+            background-color: #e3f2fd;
+            color: #1976d2;
+            font-weight: bold;
+        }
+        
+        .highlight-yellow {
+            background-color: #fff9c4;
+            color: #f57f17;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <table>
+    
+    <h1>Belajar Tabel HTML</h1>
+    <p style="text-align: center; color: #666;">Contoh implementasi tabel HTML dengan berbagai fitur</p>
+    
+    <!-- Contoh 1: Tabel Dasar dengan Border dan Cell Padding -->
+    <div class="table-container">
+        <h2>Contoh 1: Tabel Dasar</h2>
+        <p>Tabel sederhana dengan border dan padding cell</p>
         
-    </table>
+        <!-- 
+            Atribut border="1" menambahkan garis tepi pada tabel
+            cellpadding="15" menambahkan jarak antara konten dan border cell
+        -->
+        <table class="basic-table" border="1" cellpadding="15">
+            <thead>
+                <tr>
+                    <th>Kolom 1</th>
+                    <th>Kolom 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- bgcolor digunakan untuk memberi warna latar pada cell -->
+                    <td class="highlight-blue">Baris 1 Kolom 1</td>
+                    <td>Baris 1 Kolom 2</td>
+                </tr>
+                <tr>
+                    <td class="highlight-yellow">Baris 2 Kolom 1</td>
+                    <td>Baris 2 Kolom 2</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Contoh 2: Tabel Kompleks dengan Rowspan dan Colspan -->
+    <div class="table-container">
+        <h2>Contoh 2: Tabel Hasil Panen</h2>
+        <p>Tabel kompleks menggunakan rowspan dan colspan untuk header gabungan</p>
+        
+        <!-- 
+            rowspan="2" membuat cell "Bulan" menempati 2 baris
+            colspan="2" membuat cell "Hasil Panen" menempati 2 kolom
+        -->
+        <table>
+            <thead>
+                <tr>
+                    <!-- Baris header pertama -->
+                    <th rowspan="2" style="background-color: #ffeb3b;">Bulan</th>
+                    <th colspan="2" style="background-color: #4caf50;">Hasil Panen</th>
+                </tr>
+                <tr>
+                    <!-- Baris header kedua (untuk sub-kolom) -->
+                    <th>Padi</th>
+                    <th>Kacang</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Januari</td>
+                    <td>500 Kg</td>
+                    <td>231 Kg</td>
+                </tr>
+                
+                <tr>
+                    <td>Februari</td>
+                    <td>342 Kg</td>
+                    <td>423 Kg</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>Maret</td>
+                    <td>432 Kg</td>
+                    <td>124 Kg</td>
+                </tr>
+
+                <tr>
+                    <td>April</td>
+                    <td>453 Kg</td>
+                    <td>523 Kg</td>
+                </tr>
+                
+                <!-- Baris total untuk summary -->
+                <tr style="font-weight: bold; background-color: #e8f5e9;">
+                    <td>Total</td>
+                    <td>1.727 Kg</td>
+                    <td>1.301 Kg</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Contoh 3: Tabel dengan Caption dan Footer -->
+    <div class="table-container">
+        <h2>Contoh 3: Tabel dengan Caption</h2>
+        <p>Tabel dengan caption dan struktur yang lebih lengkap</p>
+        
+        <table>
+            <caption style="caption-side: top; padding: 10px; font-weight: bold;">
+                Data Penjualan Bulanan 2024
+            </caption>
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Produk</th>
+                    <th scope="col">Harga</th>
+                    <th scope="col">Terjual</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Beras Premium</td>
+                    <td>Rp 12.000</td>
+                    <td>50</td>
+                    <td>Rp 600.000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Minyak Goreng</td>
+                    <td>Rp 15.000</td>
+                    <td>30</td>
+                    <td>Rp 450.000</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr style="font-weight: bold;">
+                    <td colspan="4">Grand Total</td>
+                    <td>Rp 1.050.000</td>
+                </tr>
+                <p><small>Copyright &copy; 2025 fathirr</small></p>
+            </tfoot>
+        </table>
+    </div>
+    
+    <!-- Catatan tambahan untuk pengguna -->
+    <div style="max-width: 600px; margin: 30px auto; padding: 20px; background-color: #e3f2fd; border-radius: 8px;">
+        <h3 style="color: #1976d2;">💡 Tips Penggunaan Tabel HTML:</h3>
+        <ul>
+            <li><strong>thead</strong>: Gunakan untuk header tabel</li>
+            <li><strong>tbody</strong>: Gunakan untuk body/content tabel</li>
+            <li><strong>tfoot</strong>: Gunakan untuk footer/summary tabel</li>
+            <li><strong>scope</strong>: Bantu screen reader memahami struktur tabel</li>
+            <li><strong>caption</strong>: Berikan judul untuk tabel</li>
+        </ul>
+    </div>
+    <hr>
+
+    <footer>
+        <p><small>Copyright &copy; 2025 fathirr</small></p>
+    </footer>
+    
 </body>
 </html>
