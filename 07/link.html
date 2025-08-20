@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Link - fathir</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.5;
+        }
+        nav a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        iframe {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tentang Kami</h1>
+    </header>
+    
+    <nav>
+        <!-- hlaman utama -->
+        <!-- menjalankan js -->
+        <p>
+            <a href="#" onclick="alert('Hello World!')">Jalankan JS</a>
+            <br>
+            <a href="#!" onmouseover="alert('hai fathir, sudah kamu sentuh!')">Coba Sentuh Link ini</a>
+            <br>
+            <a href="#!"onmouseout="alert('hai selamat datang!')">klik ini</a>
+        </p>
+        <a href="about.html" style="color: coral;">Tentang Kami</a> | <!--membri warna pada link-->
+        <a href="home.html" style="color: pink;">Beranda</a> |
+        <a href="contact.html" style="color: yellow;">Kontak</a>
+    </nav>
+
+    <hr>
+    
+    <section>
+        <h2>Hubungi kami</h2>
+        <p>
+            Kamu bisa menghubungi saya melalui nomor WA: 
+            <a href="https://api.whatsapp.com/send?phone=6287111&text=Hi" target="_blank" rel="noopener noreferrer">+6287111</a>
+        </p> <!--menggunakan _blank untuk membuka tab baru -->
+        <p>
+            Jangan lupa follow juga fan page saya ya:
+            <a href="https://www.instagram.com/itsmeftrzhr_"  target="_blank" title="menuju ke instagram" rel="noopener noreferrer">@itsmeftrzhr_</a>
+        </p> <!--  menggunakan title untuk link -->
+    </section>
+
+    <hr>
+    
+    <!-- menambahkan frame ke dalam link mengguanakan iframe -->
+    <section>
+        <h2>menggunakan Iframe</h2>
+        <p>
+            <a href="https://www.petanikode.com" target="myframe">Klik untuk membuka PetaniKode di iframe di bawah ini</a>
+        </p>
+        <iframe name="myframe" width="100%" height="300" style="max-width: 600px;" title="Frame untuk menampilkan konten">
+            Browser Anda tidak mendukung iframe. Silakan kunjungi <a href="https://www.petanikode.com">PetaniKode</a> secara langsung.
+        </iframe>
+    </section>
+
+    <hr>
+
+    <h1 style="text-decoration: underline;">MEMBUAT LINK ANCHOR</h1>
+
+    <!-- membuat acnhor/jangkar link -->
+    <h1>Contoh Link Anchor</h1>
+        <p>Ini adalah contoh link anchor. Coba klik link ini:
+            <a href="#penutup">Meluncur ke Penutup</a> maka kamu
+            akan dibawa ke bagian penutup dari dokumen ini.
+        </p>
+        <h2>Apa itu Jangkar?</h2>
+        <p>
+            Anchor dalam bahasa indonesia artinya jangkar. Saya yakin
+            kamu pasti pernah melihat jangkar. Fungsi jangkar untuk 
+            menahan kapal agar tidak hanyut. Tapi dalam HTML, fungsinya
+            untuk membuat link yang bisa membawa kita meluncur ke tujuan
+            jangkar itu.
+        </p>
+        <p>
+            Jangkar atau anchor di HTML tidak hanya bisa digunakan pada
+            satu dokumen saja. Ia juga bisa digunakan untuk membuka dokumen
+            lain, lalu mengaitkan jangkarnya.
+        </p>
+        <p>
+            Jangkar biasanya dibuat dengan tanda pagar (#) lalu diikuti
+            dengan nama id dari elemen yang ingin dituju. Contohnya #penutup,
+            maka link yang menggunakan anchor tersebut akan mencari elemen
+            HTML yang memiliki id `penutup` dan membawa kita ke sana.
+            Kira-kira begitulah cara kerjanya.
+        </p>
+        <h2 id="penutup">Akhir Kata..</h2>
+        <p>
+            Ini adalah penutup dari artikel ini, dan coba perhatikan headingnya.
+            Di sana kita menggunakan id="penutup". Maka elemen ini akan menjadi
+            tujuan dari anchor link.
+        </p>
+        <hr>
+
+        <hr>
+        <H1>MEMBUAT LINK UNTUK MENDOWNLOAD FILE</H1> 
+    <!-- membuat link untuk mendownload file DARI DALEM-->
+    <p>Silakan Download File:
+        <a href="contoh-file.zip">contoh-file.zip</a>|
+        
+        <!-- membuat link untuk mendownload file DARI LUAR-->
+            <a href="https://releases.ubuntu.com/20.04/ubuntu-20.04-desktop-amd64.iso">Download Ubuntu</a>
+    </p>
+<HR>
+<!-- footer -->
+    <footer>
+        <p><small>Copyright &copy; 2025 fathir</small></p>
+        <p>
+            <a href="https://www.instagram.com/itsmeftrzhr_" target="_blank" rel="noopener noreferrer">Follow Instagram: @itsmeftrzhr_</a>
+        </p>
+        <p>
+            <a href="#top">Kembali ke Atas!</a>
+            <br>
+            <!-- mengubah gambar menjadi link -->
+            <a href="https://www.petanikode.com"><img src="https://www.petanikode.com/img/logo.svg" alt="Logo Petani Kode" width="100"></a>
+        </p>
+        <!-- MENGIMIRIM EMAIL LEWAT LINK -->
+        <p>
+            Info lebih lanjut:
+        <a href="mailto:tes@contoh.com" 
+        title="kirim email ke Admin">Hubungi Saya</a>
+        </p>
+    </footer>
+    <!-- membuat lin buntu -->
+    <p> 
+        <a href="#">link buntu</a>
+        <a href="#!">link buntu2</a>
+    </p>
+
+
+
+</body>
+</html>
