@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form HTML</title>
+    
+    <!-- Styling CSS yang simple dan menarik -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        /* Container untuk semua form */
+        .container {
+            max-width: 500px;
+            margin: 20px auto;
+        }
+        
+        /* Card untuk setiap form */
+        .form-card {
+            background: white;
+            padding: 25px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .form-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        /* Judul form */
+        .form-title {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        
+        /* Styling input */
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        
+        /* Tombol submit */
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        
+        .btn-submit:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        
+        <!-- Form 1: Login -->
+        <div class="form-card">
+            <h2 class="form-title">Login</h2>
+            <!-- Form login dengan method POST untuk keamanan -->
+            <form action="login.php" method="POST">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Masukkan username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label style="text-align: center;">
+                        <input type="checkbox" name="remember"> Remember me
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn-submit">Login</button>
+            </form>
+        </div>
+        
+        <!-- Form 2: Contact -->
+        <div class="form-card">
+            <h2 class="form-title">Contact Us</h2>
+            <!-- Form untuk menghubungi admin -->
+            <form action="contact.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Nama</label>
+                    <input type="text" id="name" name="name" placeholder="Nama lengkap" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subjek</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subjek pesan" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="email@domain.com" required>
+                </div>
+                
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </div>
+        
+        <!-- Form 3: Registrasi -->
+        <div class="form-card">
+            <h2 class="form-title">Registrasi</h2>
+            <!-- Form untuk pendaftaran baru -->
+            <form action="register.php" method="POST">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" placeholder="Nama lengkap" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reg-username">Username</label>
+                    <input type="text" id="reg-username" name="username" placeholder="Username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" name="email" placeholder="email@domain.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reg-password">Password</label>
+                    <input type="password" id="reg-password" name="password" placeholder="Password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="jenis_kelamin">Jenis Kelamin</label>
+                    <select id="jenis_kelamin" name="jenis_kelamin" required>
+                        <option value="">Pilih Jenis Kelamin</option>
+                        <option value="laki-laki">Laki-laki</option>
+                        <option value="perempuan">Perempuan</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="agama">Agama</label>
+                    <select id="agama" name="agama" required>
+                        <option value="">Pilih Agama</option>
+                        <option value="islam">Islam</option>
+                        <option value="kristen">Kristen</option>
+                        <option value="hindu">Hindu</option>
+                        <option value="budha">Budha</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="biografi">Biografi</label>
+                    <textarea id="biografi" name="biografi" placeholder="Ceritakan tentang diri Anda" rows="3"></textarea>
+                </div>
+                
+                <button type="submit" class="btn-submit">Daftar</button>
+            </form>
+        </div>
+        
+    </div>
+    <div class="form-card">
+    <p style="color: rgb(15, 14, 14); text-align: center;"><small>Copyright &copy; 2025 fathirr</small></p>
+    </div>
+</body>
+</html>
