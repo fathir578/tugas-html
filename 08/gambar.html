@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menampilkan Gambar di HTML</title>
+<style>
+body {
+font-family: Arial, Helvetica, sans-serif;
+max-width: 800px;
+padding: 0 auto;
+padding: 100px;
+background-image: url(perahu.jpg);
+
+}
+
+h1 {
+  color: antiquewhite;
+}
+
+p {
+  color: aliceblue;
+}
+
+figcaption {
+  color: aliceblue;
+}
+
+</style>
+    
+</head>
+<body>
+
+  <!-- menambahkan alternatif menggunakan tag alt -->
+  <!-- menambahkan gambar secara initernal -->
+    <h1>Menampilkan Gambar di HTML</h1>
+    <p>ini adalah gambar saya:</p>
+    <p>
+        <img src="atribut tag html.png" width="450px" height="350px" alt="atribut tag html" />
+    </p>
+
+    <!-- menambahkan gambar secara eksternnal -->
+    <p>Berikut ini adalah gambar Candi Borobudur:</p>
+  <p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Borobudur_Temple.jpg/320px-Borobudur_Temple.jpg" width="450px" height="350px" alt="Candi Borobudur" />
+  </p><br><hr>
+  
+  <h1>mengubah ukuran gambar</h1>
+  <!-- mengguanakan tag width dan height -->
+  <p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Borobudur_Temple.jpg/320px-Borobudur_Temple.jpg" width="450px" height="350px" alt="Candi Borobudur" />
+</p>
+
+<!-- menambahakan atribut style pada gambar -->
+  <p> 
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Borobudur_Temple.jpg/320px-Borobudur_Temple.jpg" style="width: 160px; border: 3px solid rgb(225, 192, 25);" alt="Candi Borobudur" />
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Borobudur_Temple.jpg/320px-Borobudur_Temple.jpg" style="width: 160px; border-radius: 20px;" alt="Candi Borobudur" />
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Borobudur_Temple.jpg/320px-Borobudur_Temple.jpg" style="width: 160px; height: 100px; border-radius: 50%;" alt="Candi Borobudur" />
+</p><br><hr>
+
+<!-- membuat gambar sebagai link -->
+ <h1>Gambar Sebagai Link</h1>
+  <p>Coba klik gambar ini:</p>
+  <p>
+    <a href="https://www.petanikode.com">
+      <img src="perahu.jpg" width="160"/>
+    </a>
+  </p>
+<h1>Gambar Sebagai Link</h1>
+  <p>Coba sentuh dan klik gambar ini:</p>
+  <p>
+    <img src="https://www.w3schools.com/html/workplace.jpg" usemap="#workmap"/>
+    <map name="workmap">
+      <area shape="rect" coords="34,44,270,350" title="Computer" href="#!">
+      <area shape="rect" coords="290,172,333,250" title="Phone" href="#!">
+      <area shape="circle" coords="337,300,44" title="Coffee" href="#!">
+    </map>
+  </p><hr>
+
+  <h1>Menampilkan caption pada gambar</h1>
+    <p>Berikut ini adalah gambar perahu:</p>
+  <p>
+    <figure>
+      <img src="perahu.jpg" width="300" alt="perahau"/>
+      <figcaption>Landscape perahu dan danau</figcaption>
+    </figure>
+  </p>
+  
+  <h1>menggunakan tag picture</h1>
+  <p>Berikut ini adalah gambar kapal</p>
+  <p>
+
+    <picture>
+      <source media="(min-width: 650px)" srcset="perahu.jpg">
+      <source media="(min-width: 450px)" srcset="perahu.jpg">
+      <img src="perahu.jpg">
+    </picture>
+
+
+  </p>
+</body>
+</html>
+
